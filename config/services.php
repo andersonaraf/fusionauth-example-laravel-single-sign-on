@@ -37,5 +37,6 @@ return [
         'redirect' => env('FUSIONAUTH_REDIRECT_URI'),
         'base_url' => env('FUSIONAUTH_BASE_URL'),
         'tenant_id' => env('FUSIONAUTH_TENANT_ID'),
+        'scope' => ['openid', 'profile', 'email']
     ],
 ];

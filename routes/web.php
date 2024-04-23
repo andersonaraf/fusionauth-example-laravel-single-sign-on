@@ -32,9 +32,9 @@ Route::get('/auth/redirect', function () {
  * login process
  */
 Route::get('/auth/callback', function () {
+
     /** @var \SocialiteProviders\Manager\OAuth2\User $user */
     $user = Socialite::driver('fusionauth')->user();
-
     // Let's create a new entry in our users table (or update if it already exists) with some information from the user
     $user = User::updateOrCreate([
         'fusionauth_id' => $user->id,
